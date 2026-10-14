@@ -7,6 +7,8 @@ work=home/"work/deployment"
 work.mkdir(parents=True,exist_ok=True)
 with sqlite3.connect(home/"artifacts/registry.sqlite3") as source,sqlite3.connect(work/"registry.sqlite3") as backup:
     source.backup(backup)
+    backup.execute("DELETE FROM jobs WHERE status != 'completed'")
+    backup.commit()
 archive=work/"completed-artifacts.zip"
 with zipfile.ZipFile(archive,"w",compression=zipfile.ZIP_DEFLATED) as z:
     z.write(work/"registry.sqlite3","artifacts/registry.sqlite3")

@@ -137,6 +137,8 @@ The literature provides context rather than a numerical leaderboard. Review cove
 
 Two supplied notebooks inform EDA and future feature engineering. The XGB reference combines train/test covariates for aggregates and applies label-informed UID post-processing. These are competition-specific operations, not this inductive protocol. The EDA reference overwrites TimeSeriesSplit with KFold; sorting alone does not create forward-time validation. Their leaderboard claims are not adopted as our results.
 
+\input{optimization_narrative.tex}
+
 \section{Discussion and Limitations}
 Results are bounded by the feature subset, network family, training budget, and temporal window. Chronological holdout does not reproduce evolving labels, infrastructure, customer populations, or adversaries. Exact duplicate removal is weaker than entity-disjoint evaluation.
 

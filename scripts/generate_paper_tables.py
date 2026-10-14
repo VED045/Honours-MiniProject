@@ -47,3 +47,13 @@ for method in names:
     dev.append(f"{names[method]} development AP is {vals.mean():.4f}"+(f" $\\pm$ {vals.std(ddof=1):.4f}" if len(vals)>1 else '')+f" across {len(vals)} seeds.")
 (paper/'development_narrative.tex').write_text(' '.join(dev) or 'No development experiments recorded.')
 print('Generated quantitative paper content directly from artifacts')
+
+exploratory=[json.loads(p.read_text()) for p in (home/'artifacts').glob('*/result.json')]
+exploratory=[r for r in exploratory if not r['dataset']['demonstration'] and not r['dataset']['development_sample'] and r['configuration'].get('run_role')=='exploratory']
+if exploratory:
+    best=max(exploratory,key=lambda r:r['validation_metrics']['average_precision'])
+    m=best['metrics']
+    text=f"An exploratory follow-up selects {best['configuration']['name']} by validation AP {best['validation_metrics']['average_precision']:.4f}. With {best['input_width']} inputs, it measures test ROC-AUC {m['roc_auc']:.4f}, AP {m['average_precision']:.4f}, precision {m['precision']:.4f}, recall {m['recall']:.4f}, and {m['fn']:,} missed frauds at validation-selected cutoff {m['threshold']:.2f}. These results are separate from the controlled ANN means. The inspected test window makes follow-up reporting exploratory; confirmation requires a fresh temporal window. Kaggle ROC-AUC is not AP or alert precision."
+else:
+    text="No completed full-data exploratory model is available."
+(paper/'optimization_narrative.tex').write_text(text+'\n',encoding='utf-8')

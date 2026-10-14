@@ -38,3 +38,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: docker build -t fraud-research .
+      - name: Container health and private API smoke
+        run: |
+          docker run -d --name fraud-api -p 8000:8000 -e API_KEY=ci-only-private-key-at-least-24-characters fraud-research
+          curl --retry 20 --retry-delay 2 --retry-connrefused --fail http://localhost:8000/health
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://localhost:8000/api/v1/models)" = "401"
+          curl --fail -H 'Authorization: Bearer ci-only-private-key-at-least-24-characters' http://localhost:8000/api/v1/models
+      - name: Container logs
+        if: failure()
+        run: docker logs fraud-api
