@@ -1,8 +1,36 @@
 {
-  "completed_runs_verified": 21,
+  "completed_runs_verified": 25,
   "primary_full_runs": 9,
   "identical_primary_holdouts": true,
   "checks": [
+    {
+      "id": "f2af47ca7a2546b7940ad649709d199f",
+      "method": "catboost",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "8d5e7f11b8ac41bb99ff8dd3bbbbe23b",
+      "method": "catboost",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "03c0cfff28b84725873fa27288e119c3",
+      "method": "catboost",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "edd42705d0be44119567b66d6bce2bea",
+      "method": "catboost",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
     {
       "id": "473a72e9a3944fe0b0597d8b430cadf7",
       "method": "cost_sensitive",
