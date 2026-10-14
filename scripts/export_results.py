@@ -16,7 +16,7 @@ def export(home):
     out.mkdir(parents=True,exist_ok=True)
     figdir=home/"paper/figures"
     figdir.mkdir(parents=True,exist_ok=True)
-    rows=[{"id":r["id"],"source":r["dataset"]["source"],"development_sample":r["dataset"]["development_sample"],"demonstration":r["dataset"]["demonstration"],"split_hash":r["split_hash"],"method":r["configuration"]["method"],"seed":r["configuration"]["seed"],**r["metrics"]} for r in records]
+    rows=[{"id":r["id"],"source":r["dataset"]["source"],"development_sample":r["dataset"]["development_sample"],"demonstration":r["dataset"]["demonstration"],"split_hash":r["split_hash"],"method":r["configuration"]["method"],"seed":r["configuration"]["seed"],"name":r["configuration"]["name"],"run_role":r["configuration"].get("run_role","primary"),"validation_average_precision":r["validation_metrics"]["average_precision"],"input_width":r["input_width"],**r["metrics"]} for r in records]
     df=pd.DataFrame(rows)
     df.drop(columns=["confusion_matrix"],errors="ignore").to_csv(out/"comparison.csv",index=False)
     (out/"dashboard.json").write_text(json.dumps(records,indent=2))

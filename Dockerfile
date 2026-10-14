@@ -1,5 +1,6 @@
 FROM python:3.12.14-slim
 WORKDIR /app
+RUN mkdir -p /root/.ssh && chmod 0700 /root/.ssh
 RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 && rm -rf /var/lib/apt/lists/*
 COPY requirements.txt requirements-torch.txt ./
 RUN pip install --no-cache-dir -r requirements.txt && pip install --no-cache-dir -r requirements-torch.txt
