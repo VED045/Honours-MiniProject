@@ -1,0 +1,15 @@
+The test fraud prevalence is 3.488\%. The completed group contains 9 runs on a common fingerprint and split hash. SMOTENC + ANN has the highest recorded AP in this group; this internal descriptive result does not establish general superiority.
+
+Baseline ANN records mean AP 0.3870. For the first seed, precision is 0.4437, recall is 0.3907, and F1 is 0.4155 at validation-selected cutoff 0.13. It flags 2,718 of 88,508 test transactions, including 1,512 false positives, while missing 1,881 frauds.
+
+The IID test AP interval is [0.3820, 0.4163] from 50 valid bootstrap replicates; temporal dependence is not modeled.
+
+SMOTENC + ANN records mean AP 0.4266. For the first seed, precision is 0.4429, recall is 0.4532, and F1 is 0.4480 at validation-selected cutoff 0.59. It flags 3,159 of 88,508 test transactions, including 1,760 false positives, while missing 1,688 frauds.
+
+The IID test AP interval is [0.4163, 0.4477] from 50 valid bootstrap replicates; temporal dependence is not modeled.
+
+Weighted ANN records mean AP 0.3752. For the first seed, precision is 0.3629, recall is 0.3741, and F1 is 0.3684 at validation-selected cutoff 0.81. It flags 3,183 of 88,508 test transactions, including 2,028 false positives, while missing 1,932 frauds.
+
+The IID test AP interval is [0.3485, 0.3809] from 50 valid bootstrap replicates; temporal dependence is not modeled.
+
+Exact-covariate duplicate removal excluded 487 observations. The split has 413,037 training, 88,508 validation, and 88,508 test observations. Figures and counts come from saved probabilities and metadata.

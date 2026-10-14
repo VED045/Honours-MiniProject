@@ -1,0 +1,11 @@
+data/
+artifacts/
+.venv/
+frontend/
+work/
+.git/
+.env*
+**/__pycache__/
+notebooks/
+paper/
+*.log

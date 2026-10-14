@@ -1,0 +1,2 @@
+# Paper
+From the project root, run python scripts/generate_paper_tables.py, then compile paper/main.tex with latexmk -pdf from paper/, or the local portable work/tools/tectonic.exe. Only compatible completed IEEE-CIS artifacts enter the paper. Development seeds and full-data seeds are reported separately. Six post-2022 journal references are verified in docs/references.json. No author or affiliation was invented.

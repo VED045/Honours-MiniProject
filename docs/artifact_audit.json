@@ -1,0 +1,154 @@
+{
+  "completed_runs_verified": 21,
+  "primary_full_runs": 9,
+  "identical_primary_holdouts": true,
+  "checks": [
+    {
+      "id": "473a72e9a3944fe0b0597d8b430cadf7",
+      "method": "cost_sensitive",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "b5e37ca16c8b4ce59e4486103ed4da56",
+      "method": "baseline",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "a9aebd2ae01c4b6e93f7821e4899d112",
+      "method": "baseline",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "02fb36f3a4f949a4a0ba1f04e62885b6",
+      "method": "cost_sensitive",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "b4a0628414744941b14274a5211d8772",
+      "method": "smote",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "4116b32415814ae1b33c0c5caf488375",
+      "method": "baseline",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "567ec3c3938d4f99a97cdacd02da924d",
+      "method": "cost_sensitive",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "ce040fc4d9384b02b6132f2f0876f88c",
+      "method": "smote",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "4c54c7659f7e4d9dac679c2c2d1ea7bb",
+      "method": "baseline",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "12660dcb926246bc8575394718325b46",
+      "method": "cost_sensitive",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "c8160093f9094b76be1b13ccb5d15aef",
+      "method": "smote",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "ac2d51e385ed4d38bf1d766797fba69c",
+      "method": "baseline",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "2e91477b23504a6699b5878fbbf4e9a6",
+      "method": "cost_sensitive",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "9c68bda85d9f4a07be41290960454fd4",
+      "method": "smote",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "1c48c884b8e64e5abe6721c1349d1f4a",
+      "method": "baseline",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "79e326db57bf464fa52e91b9df7ad6c6",
+      "method": "cost_sensitive",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "41c069a09a904544aab2647b4ae80fbb",
+      "method": "smote",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "8ced21f4a28741f6accfd577c24baa13",
+      "method": "baseline",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "55d62008906249329f2d8cd294adb0b8",
+      "method": "cost_sensitive",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "fb77903f01e24c439a0bd38cf30e3f3b",
+      "method": "smote",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    },
+    {
+      "id": "fe825904594943519606a619266ff3d4",
+      "method": "baseline",
+      "metrics_match": true,
+      "partitions_disjoint": true,
+      "config_hash_match": true
+    }
+  ]
+}

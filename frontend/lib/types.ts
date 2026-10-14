@@ -1,0 +1,14 @@
+export type Config=Record<string,string|number|boolean|string[]|number[]|null>;
+export type Property={type?:string;enum?:string[];minimum?:number;maximum?:number;exclusiveMinimum?:number;exclusiveMaximum?:number;minLength?:number;maxLength?:number;items?:{type:string};anyOf?:Property[];title?:string};
+export type Schema={properties:Record<string,Property>};
+export type Metrics={accuracy:number;precision:number;recall:number;f1:number;roc_auc:number;average_precision:number;specificity:number;false_positive_rate:number;false_negative_rate:number;balanced_accuracy:number;mcc:number;fp:number;fn:number;tp:number;tn:number;flagged:number;transactions:number;threshold:number;prevalence:number;training_seconds?:number;inference_seconds?:number;confusion_matrix:number[][]};
+export type DatasetMeta={source:string;demonstration:boolean;development_sample:boolean;fingerprint:string};
+export type History={epoch:number;train_loss:number;val_loss:number;val_average_precision:number;train_average_precision:number;elapsed_seconds:number;checkpoint:boolean};
+export type Job={id:string;status:string;config:Config;created:string;updated:string;error?:string;progress:{epoch?:number;epochs?:number;message?:string;history?:History[]};metrics?:Metrics;validation_metrics?:Metrics;dataset?:DatasetMeta;split_hash?:string;artifact_available?:boolean};
+export type Point={x:number;y:number};
+export type Artifact={id:string;configuration:Config;dataset:DatasetMeta;split_hash:string;config_hash:string;selected_threshold:number;feature_schema:Record<string,{type:string;nullable:boolean}>;encoded_features:string[];history:History[];metrics:Metrics;validation_metrics:Metrics;class_distribution:{original:number[];resampled:number[];strategy:string};partition_counts:Record<string,number>;curves:{roc:Point[];pr:Point[];threshold:({threshold:number}&Partial<Metrics>)[]};bootstrap_interval:Record<string,{low:number;high:number;replicates:number}>;timing:{training_seconds:number;inference_seconds:number};checkpoint_epoch:number;early_stopped:boolean};
+export type Feature={name:string;type:string;missing:number;unique:number;mean?:number;distribution:{name:string;count:number}[];class_means?:Record<string,number|null>};
+export type Summary=DatasetMeta&{rows:number;columns:number;prevalence:number;fraud_count:number;features:Feature[]};
+export type SavedConfig={id:string;name:string;config:Config};
+export type Reference={key:string;title:string;authors:string[];year:number;doi:string;venue:string;publisher_url:string;verified_claim:string;limitations:string;relevance:string;type:string};
+export type Prediction={probability:number;flagged:boolean;threshold:number;model_version:string;dataset:DatasetMeta;unknown_categories:string[];explanation?:{method:string;baseline:string;caution:string;contributions:{feature:string;contribution:number}[]}};

@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: fraud-research-api
+    runtime: docker
+    plan: standard
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    disk:
+      name: research-artifacts
+      mountPath: /app/storage
+      sizeGB: 20
+    envVars:
+      - key: FRAUD_HOME
+        value: /app/storage
+      - key: TRAINING_ENABLED
+        value: "false"
+      - key: REQUIRE_API_KEY
+        value: "true"
+      - key: API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false

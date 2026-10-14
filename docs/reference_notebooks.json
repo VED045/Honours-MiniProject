@@ -1,0 +1,16 @@
+[
+  {
+    "name": "xgb-fraud-with-magic-0-9600.ipynb",
+    "sha256": "ed799380eaab828de4a3dd2123ea73f8613ed5c1bab51fdd9eb4786521a4a756",
+    "cells": 47,
+    "executed_by_project": false,
+    "role": "user-provided methodological reference; not peer-reviewed benchmark"
+  },
+  {
+    "name": "eda-and-models.ipynb",
+    "sha256": "334b2b263e33b2b9ff626108929637d066730c0d0ff6904ef9c91716302b51b3",
+    "cells": 57,
+    "executed_by_project": false,
+    "role": "user-provided methodological reference; not peer-reviewed benchmark"
+  }
+]
