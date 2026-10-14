@@ -32,4 +32,3 @@ The project should compare approaches on its own identical, untouched observatio
 - [Hayat and Magnier official publisher PDF](https://mdpi-res.com/d_attachment/mathematics/mathematics-13-02563/article_deploy/mathematics-13-02563.pdf) supplies the first-page date and metadata.
 
 All summaries are original paraphrases; no abstracts were copied.
-

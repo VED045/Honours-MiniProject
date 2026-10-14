@@ -82,4 +82,3 @@ For a secondary reference, XGBoost histogram trees with a training-fitted repres
 ## Limits
 
 No guarantee of “best available” or state-of-the-art follows from a leaderboard writeup. Competition data preparation, entity aggregation and ROC-AUC scoring differ from this project's temporal, native-prevalence average-precision-focused evaluation. No leaderboard value is reproduced or promised. No project source files were edited by this research task.
-
